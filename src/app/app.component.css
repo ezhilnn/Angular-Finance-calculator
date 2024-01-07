@@ -1,0 +1,30 @@
+.mdl-layout__header {
+    background-color: #36454F; /* Your custom primary color */
+  }
+
+  .mdl-layout__drawer {
+    background-color: #000000; /* Your custom sidebar color */
+    color: white;
+  }
+
+  .mdl-layout__content {
+    background-color: #000000; /* Your custom main content area color */
+  }
+.mdl-navigation{
+  color: white;
+}
+.mdl-navigation__link{
+  color: white !important;
+  font-size: 12px;
+  font-weight: 600;
+
+}
+.mdl-layout-title{
+  cursor: pointer;
+}
+app-footer{
+  margin-top: 92vh;
+}
+header{
+  height: 56px;
+}

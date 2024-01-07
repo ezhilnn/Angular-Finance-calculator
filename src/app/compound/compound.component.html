@@ -1,0 +1,30 @@
+<h2 class="text-center">Compound Interest Calculator</h2>
+<div class="container mb-20">
+    <form #compoundForm="ngForm" (ngSubmit)="calculateInterest(compoundForm)">
+        <div class="form-group">
+            <label for="principal">Principal Amount</label>
+            <input type="number" class="form-control" id="principal" name="principal" ngModel required>
+        </div>
+        <div class="form-group">
+            <label for="rate">Annual Interest Rate (%)</label>
+            <input type="number" class="form-control" id="rate" name="rate" ngModel required>
+        </div>
+        <div class="form-group">
+            <label for="time">Investment Duration (Years)</label>
+            <input type="number" class="form-control" id="time" name="time" ngModel required>
+        </div>
+        <div class="form-group">
+            <label for="compounded">Compounded Frequency (Annually)</label>
+            <input type="number" class="form-control" id="compounded" name="compounded" ngModel required>
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-secondary" [disabled]="compoundForm.invalid">Calculate</button>
+        </div>
+    </form>
+</div>
+<div class="card" *ngIf="totalInterest !== null">
+    <div class="card-body text-center">
+        <div class="card-title">Total Amount with Interest</div>
+        <div class="card-text">{{ totalInterest | number:'0.2' }}</div>
+    </div>
+</div>

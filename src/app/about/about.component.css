@@ -1,0 +1,19 @@
+.card{
+    background-color: #36454F;
+    padding: 20px;
+    justify-content: space-around;
+    font-weight:400;
+    width: 100%;
+
+}
+.card-text{
+    font-size: 15px;
+}
+.container{
+    width: 98vw;
+    height: 75vh;
+}
+.card-title{
+    font-weight: bolder;
+    font-size: 42px;
+}

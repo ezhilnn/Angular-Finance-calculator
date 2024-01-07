@@ -1,0 +1,32 @@
+<!-- credit-card-payoff-calculator.component.html -->
+<div class="credit-card-payoff-calculator">
+    <h2 class="text-center">Credit Card Payoff Calculator</h2>
+    <div class="container mb-20">
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <div class="form-group">
+          <label for="balance">Current Balance</label>
+          <input type="number" class="form-control" id="balance" name="balance" ngModel required>
+        </div>
+        <div class="form-group">
+          <label for="interestRate">Annual Interest Rate (%)</label>
+          <input type="number" class="form-control" id="interestRate" name="interestRate" ngModel required>
+        </div>
+        <div class="form-group">
+          <label for="monthlyPayment">Monthly Payment</label>
+          <input type="number" class="form-control" id="monthlyPayment" name="monthlyPayment" ngModel required>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-secondary" [disabled]="f.invalid">Calculate</button>
+        </div>
+      </form>
+    </div>
+    <div class="card">
+      <div class="card-body text-center" *ngIf="monthsToPayOff !== undefined">
+        <div class="card-title">Months to Pay Off</div>
+        <div class="card-text">{{ monthsToPayOff }}</div>
+        <div class="card-title">Total Interest Paid</div>
+        <div class="card-text">{{ totalInterestPaid | number:'.2'  }}</div>
+      </div>
+    </div>
+  </div>
+  

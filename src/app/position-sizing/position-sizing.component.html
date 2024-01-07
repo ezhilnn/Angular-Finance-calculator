@@ -1,0 +1,30 @@
+
+<h2 class="text-center">Position Sizing Calculator</h2>
+<div class="container">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+        <!-- Form elements -->
+        <div class="form-group">
+            <label for="">Your Capital</label>
+            <input type="text" class="form-control" placeholder="your capital" ngModel name="cap" #cap required>
+        </div>
+        <div class="form-group">
+            <label for="">Stoploss as a % of capital on this trade </label>
+            <input type="text" class="form-control" placeholder="stoploss" ngModel name="sl" #sl required>
+        </div>
+        <div class="form-group">
+            <label for="">Buying Price</label>
+            <input type="text" class="form-control" placeholder="Buying Price" ngModel name="bp" #bp required>
+        </div>
+        <div class="form-group">
+            <label for="">Stoploss Price</label>
+            <input type="text" class="form-control" placeholder="Stoploss Price" ngModel name="stop" #stop required>
+        </div>
+        <div class="text-center"><button class="btn btn-secondary" [disabled]="f.invalid"> Calculate</button></div>
+    </form>
+</div>
+<div class="card">
+    <div class="card-body text-center">
+        <div class="card-title">Maximum Quantity that can be traded</div>
+        <div class="card-text">{{Max}}</div>
+    </div>
+</div>

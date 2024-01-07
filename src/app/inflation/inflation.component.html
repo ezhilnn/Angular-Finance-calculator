@@ -1,0 +1,28 @@
+<h2 class="text-center">Inflation Calculator</h2>
+<div class="container">
+    <form #f="ngForm" (ngSubmit)="calculateInflation(f)">
+        <div class="form-group">
+            <label for="">Starting Year</label>
+            <input type="number" class="form-control" placeholder="Starting Year" ngModel name="startingYear" #startingYear required>
+        </div>
+        <div class="form-group">
+            <label for="">Starting Amount</label>
+            <input type="number" class="form-control" placeholder="Starting Amount" ngModel name="startingAmount" #startingAmount required>
+        </div>
+        <div class="form-group">
+            <label for="">Ending Year</label>
+            <input type="number" class="form-control" placeholder="Ending Year" ngModel name="endingYear" #endingYear required>
+        </div>
+        <div class="form-group">
+            <label for="">Inflation Rate per Year (%)</label>
+            <input type="number" class="form-control" placeholder="Inflation Rate" ngModel name="inflationRate" #inflationRate required>
+        </div>
+        <div class="text-center"><button class="btn btn-secondary" [disabled]="f.invalid">Calculate</button></div>
+    </form>
+</div>
+<div class="card">
+    <div class="card-body text-center">
+        <div class="card-title">Adjusted Amount</div>
+        <div class="card-text">{{ adjustedAmount | number:'.2' }}</div>
+    </div>
+</div>

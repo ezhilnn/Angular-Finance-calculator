@@ -1,0 +1,40 @@
+.card{
+background-color: black;
+color: white;
+}
+input{
+    height: 50px;
+    margin-bottom: 35px;
+    margin-top: 15px;
+}
+input:focus{
+    border: 2px solid rgb(54, 173, 219);
+}
+label{
+    font-weight: bold;
+    font-size: 20px;
+}
+button{
+    width: 100px;
+    cursor: pointer; 
+    border-radius: 5px;
+    font-weight: bold;
+}
+button:hover{
+    color: black;
+    background-color: rgb(241, 219, 219);
+}
+.card{
+    margin-top: 30px;
+    background-color: black;
+}
+.card-title{
+    font-weight: bolder;
+    font-size: 35px;
+
+}
+.card-text{
+    margin-top: 30px;
+    font-size: 30px;
+    font-weight: bold;
+}
